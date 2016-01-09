@@ -29,25 +29,14 @@ The API uses a default metric structure
 
 ```javascript    
 var metrics = require('metrics-storage');
+// returns promise metrics.save(metric, cb)
 metrics.save({
   timestamp: "2017-01-09T04:20:00Z",
   name: "some.metric.com",
   value: 100,
   unit: "second"      
-})
+}, done);
 
-// var collection = get(metricName, startsAt, endsAt, offset, limit);
-
-// return the last 25 for the specified metric ordered by descending timestamp
-metrics.get('some.metric.com');
-// return the last 25 for the specified metric in the following interval
-metrics.get('some.metric.com', "2016-01-09T04:20:00Z", "2017-01-09T04:20:00Z");
-// return the last 25 for the specified metric in the following interval
-metrics.get('some.metric.com', new Date("2017-01-09T04:20:00Z"), new Date("2017-01-09T04:20:00Z"));
-// return the metrics between position 50 and 100 the specified metric
-metrics.get('some.metric.com', null, null, 50, 50);
-// return the last 25 for the metrics specified by the wildcard
-metrics.get('some.metric.com.*.request');
 ```
 
 **List metrics**
@@ -55,14 +44,14 @@ metrics.get('some.metric.com.*.request');
 ```javascript    
 var metrics = require('metrics-storage');
 
-// var collection = metrics.get(metricName, startsAt, endsAt, offset, limit);
+// var promise = metrics.get(metricName, startsAt, endsAt, offset, limit, cb);
 
 // return the last 25 for the specified metric ordered by descending timestamp
-metrics.get('some.metric.com');
+metrics.get('some.metric.com', cb);
 // return the last 25 for the specified metric in the following interval
-metrics.get('some.metric.com', "2016-01-09T04:20:00Z", "2017-01-09T04:20:00Z");
+metrics.get('some.metric.com', "2016-01-09T04:20:00Z", "2017-01-09T04:20:00Z", cb);
 // return the last 25 for the specified metric in the following interval
-metrics.get('some.metric.com', new Date("2017-01-09T04:20:00Z"), new Date("2017-01-09T04:20:00Z"));
+metrics.get('some.metric.com', new Date("2017-01-09T04:20:00Z"), new Date("2017-01-09T04:20:00Z"), cb);
 // return the metrics between position 50 and 100 the specified metric
 metrics.get('some.metric.com', null, null, 50, 50);
 // return the last 25 for the metrics specified by the wildcard
