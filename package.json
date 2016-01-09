@@ -4,7 +4,7 @@
   "description": "This package contains a agnostic metrics storage implementation with support for several datasrouces",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/mocha/bin/mocha tests"
+    "test": "NODE_ENV=test node_modules/mocha/bin/mocha tests"
   },
   "repository": {
     "type": "git",
