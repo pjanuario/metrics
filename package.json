@@ -4,7 +4,7 @@
   "description": "This package contains a agnostic metrics storage implementation with support for several datasrouces",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node_modules/mocha/bin/mocha tests"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/pjanuario/metrics/issues"
   },
-  "homepage": "https://github.com/pjanuario/metrics#readme"
+  "homepage": "https://github.com/pjanuario/metrics#readme",
+  "devDependencies": {
+    "mocha": "^2.3.4"
+  }
 }
