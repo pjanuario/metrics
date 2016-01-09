@@ -1,0 +1,25 @@
+{
+  "name": "metrics-storage",
+  "version": "1.0.0",
+  "description": "This package contains a agnostic metrics storage implementation with support for several datasrouces",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pjanuario/metrics.git"
+  },
+  "keywords": [
+    "metrics",
+    "api",
+    "storage",
+    "pg"
+  ],
+  "author": "Pedro Januário <prnjanuario@gmail.com> (http://shared-mind.tumblr.com/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pjanuario/metrics/issues"
+  },
+  "homepage": "https://github.com/pjanuario/metrics#readme"
+}
